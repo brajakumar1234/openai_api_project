@@ -1,0 +1,10 @@
+
+services:
+  ai-log-analyzer:
+    build: .
+    container_name: ai-log-analyzer
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    restart: unless-stopped
